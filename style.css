@@ -240,7 +240,9 @@ canvas {
   transition: all 0.3s ease;
 }
 
-.nav-logo {
+
+.nav-logo a{
+  color:white;
   font-family: 'Orbitron', sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
