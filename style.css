@@ -240,9 +240,7 @@ canvas {
   transition: all 0.3s ease;
 }
 
-
-.nav-logo a{
-  color:white;
+.nav-logo {
   font-family: 'Orbitron', sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
@@ -1001,4 +999,25 @@ b {
 .ul1 li {
   cursor: pointer;
 }
+.nav-logo a{
+  color: #FFFFFF;
+}
+/* Main logo */
+#ahouba-logo{
+  width: min(80vw, 1200px);   /* responsive but capped */
+  height: auto;              /* maintain aspect ratio */
+  margin: 20px auto;
+  display: block;
+}
 
+/* Navbar logo */
+.nav-logo img{
+  width: clamp(35px, 5vw, 50px);  /* responsive scaling */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.nav-logo img:hover{
+  transform: scale(1.2);
+}
