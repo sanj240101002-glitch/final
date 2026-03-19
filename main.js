@@ -802,7 +802,28 @@ const galleryNext = document.getElementById("galleryNext");
 const missionGalleryData = {
   
   glimpses: ["public/models/glimpses/1.webp", "public/models/glimpses/2.webp", "public/models/glimpses/3.webp", "public/models/glimpses/4.webp", "public/models/glimpses/5.webp", "public/models/glimpses/6.webp", "public/models/glimpses/7.webp", "public/models/glimpses/8.webp", "public/models/glimpses/10.webp", "public/models/glimpses/11.webp", "public/models/glimpses/12.webp"],
-  sponsors: ["public/models/sponsors/d4.png","public/models/sponsors/shija.webp","public/models/sponsors/Wow_Momo_Logo.jpg"],
+  sponsors: [
+ "public/models/sponsors/1.jpeg",
+ "public/models/sponsors/2.jpeg",
+ "public/models/sponsors/3.jpeg",
+ "public/models/sponsors/4.jpeg",
+ "public/models/sponsors/5.jpeg",
+ 
+ "public/models/sponsors/7.jpeg",
+ "public/models/sponsors/8.jpeg",
+ "public/models/sponsors/9.jpeg",
+ "public/models/sponsors/10.jpeg",
+ "public/models/sponsors/11.jpeg",
+ "public/models/sponsors/12.jpeg",
+ "public/models/sponsors/13.jpeg",
+ "public/models/sponsors/14.jpeg",
+ "public/models/sponsors/15.jpeg",
+ "public/models/sponsors/16.jpeg",
+ "public/models/sponsors/17.jpeg",
+ "public/models/sponsors/18.jpeg",
+ 
+ "public/models/sponsors/20.jpeg"
+],
   about: []
 };
 let galleryIndex = 0;
@@ -837,10 +858,14 @@ function setupGallery(missionKey) {
         if(bleft) bleft.style.display = "none";
         }
    
+   
 }
 
   
 }
+
+
+// i want when the glimpses is open img have objectfit cover while for all others it should have contain
 
 
 function renderGallery() {
@@ -882,10 +907,12 @@ img.src = item.src;
 img.loading = "lazy"; // Important for performance
 img.decoding = "async";
 
+
 div.appendChild(img);
 
     galleryTrack.appendChild(div);
   });
+
 }
 if (galleryPrev) galleryPrev.addEventListener("click", () => {
   galleryIndex = (galleryIndex - 1 + activeGallery.length) % activeGallery.length;
